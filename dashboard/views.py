@@ -7,4 +7,7 @@ def index(request):
     
 def category(request):
    return render(request,'dashboard/category.html')
+
+def product(request):
+    return render(request,'dashboard/product.html')
     
