@@ -5,5 +5,6 @@ urlpatterns =[
 
 path ('', views.index, name='dashboard-index'),
 path('category/',views.category,name='dashboard-category'),
-path('product/',views.product,name='dashboard-product')
+path('product/',views.product,name='dashboard-product'),
+path('orders/',views.orders,name='dashboard-orders'),
 ]

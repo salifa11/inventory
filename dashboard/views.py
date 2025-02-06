@@ -10,4 +10,7 @@ def category(request):
 
 def product(request):
     return render(request,'dashboard/product.html')
+
+def orders(request):
+    return render(request,'dashboard/orders.html')
     
