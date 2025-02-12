@@ -3,6 +3,7 @@ from . models import Category
 from . models import Product,Order
 
 
+
 admin.site.site_header='Thrift Admin'
 
 class ProductAdmin(admin.ModelAdmin): 
@@ -17,6 +18,7 @@ admin.site.register(Category)
 admin.site.register(Product, ProductAdmin)
 
 admin.site.register(Order)
+
 
 #to display desired data
 

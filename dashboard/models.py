@@ -33,4 +33,3 @@ class Order(models.Model):
        
  def __str__(self):
     return f'{self.product} order placed by {self.user}'
-    
