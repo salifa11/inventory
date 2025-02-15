@@ -2,6 +2,8 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 from .forms import CreateUserForm
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 def register(request):
@@ -19,6 +21,6 @@ def register(request):
     }
     return render(request,'user/register.html',context)
 
-
-def login(request):
-     return render(request,'user/login.html')
+@login_required(login_url='user-login')
+def Profile(request):
+   return render(request, 'user/profile.html')
