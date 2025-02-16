@@ -23,4 +23,4 @@ def register(request):
 
 @login_required(login_url='user-login')
 def Profile(request):
-   return render(request, 'user/profile.html')
+   return render(request,'user/profile.html')
