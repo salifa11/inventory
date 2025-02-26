@@ -1,0 +1,22 @@
+{% include 'partials/header.html' %}
+                <!-- Begin Page Content -->
+
+                <div class="content">
+                <div class="container-fluid">
+ 
+              
+          
+               {% load crispy_forms_tags %}
+               <form method="POST" class="col-lg-4">
+                {% csrf_token %}
+                {{ form|crispy }}
+               <input class="btn btn-success" type="submit" value="Update">
+                <a href="{% url 'dashboard-category' %}" class="btn btn-info">Cancel</a>
+
+            </form>  
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+            {% include 'partials/footer.html' %}

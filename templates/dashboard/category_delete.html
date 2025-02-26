@@ -1,0 +1,23 @@
+{% include 'partials/header.html' %}
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+               <div class="row mt-5">
+                <div class="alert alert-danger">
+                <h2>Do you sure want to delete?</h2>
+                </div>  
+              
+               </div>
+               <form method="POST">
+                {% csrf_token %}
+                {{ form }}
+               <input class="btn btn-danger" type="submit" value="Delete">
+                <a href="{% url 'dashboard-category' %}" class="btn btn-info">Cancel</a>
+
+            </form>  
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+            {% include 'partials/footer.html' %}

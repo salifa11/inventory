@@ -49,6 +49,11 @@
                             </div>
                         </div>
                     </div>
+                    {% for messages in messages %}
+                    {% if messages %}
+            <div class="alert alert-{{ messages.tags }}">  {{messages}} </div>
+            {% endif %}
+            {% endfor %}
                     {% load crispy_forms_tags %}
         <h3>Add Product:</h3>
 <form method="POST" class="col-lg-4">
