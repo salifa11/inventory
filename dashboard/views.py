@@ -10,7 +10,6 @@ from .forms import OrderForm
 from django.contrib.auth.models import User
 from django.contrib import messages
 
-@login_required(login_url='user-login')
 def index(request):
     products = Product.objects.all()
     product_count = products.count()
@@ -20,6 +19,7 @@ def index(request):
     user_count = users.count()
     total_price =0
 
+<<<<<<< HEAD
     for item in orders:
         total_price += item.product.price * item.order_quantity
     context ={
@@ -32,6 +32,8 @@ def index(request):
     return render(request,'dashboard/index.html',context)
     
 
+=======
+>>>>>>> f479c0ff8052bac69860701ea05fd4b014d54002
 # ----------------- CATEGORY VIEWS -----------------
 @login_required(login_url='user-login')
 def category(request):
@@ -175,5 +177,9 @@ def product_update(request, pk):
     context = {
         'form' : form,
     }
+<<<<<<< HEAD
     return render(request,'dashboard/product_update.html',context)
 
+=======
+    return render(request,'dashboard/product_update.html',context)
+>>>>>>> f479c0ff8052bac69860701ea05fd4b014d54002
